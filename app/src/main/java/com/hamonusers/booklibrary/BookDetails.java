@@ -86,7 +86,7 @@ public class BookDetails extends AppCompatActivity {
                 authorString += " " + author + ",";
             }
         }
-        authorString = authorString.substring(0,authorString.length() - 2);
+        authorString = authorString.substring(0,authorString.length() - 1);
 
         authorsTV.setText(authorString);
 
