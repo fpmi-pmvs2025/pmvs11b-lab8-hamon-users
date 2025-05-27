@@ -71,7 +71,10 @@ public class BookDetails extends AppCompatActivity {
 
         // Setting data to UI components
         titleTV.setText(title);
-        subtitleTV.setText(subtitle);
+        if (!subtitle.equals("N/A")) {
+            subtitleTV.setText(subtitle);
+        }
+        else { subtitleTV.setText(""); }
         publisherTV.setText(publisher);
         publishDateTV.setText("Published On: " + publishedDate);
         descTV.setText(description);
