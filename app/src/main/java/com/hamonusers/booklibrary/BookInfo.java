@@ -121,4 +121,8 @@ public class BookInfo {
         this.infoLink = infoLink;
         this.buyLink = buyLink;
     }
-}
+
+    public BookInfo() {
+
+    }
+ }

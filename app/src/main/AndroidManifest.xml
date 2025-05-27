@@ -30,6 +30,9 @@
         <activity
             android:name=".BookDetails"
             android:exported="false" />
+        <activity android:name=".SavedBooksActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

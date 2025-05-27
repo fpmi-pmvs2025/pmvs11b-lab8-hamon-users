@@ -1,5 +1,6 @@
 package com.hamonusers.booklibrary;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText searchEdt;
     private ImageButton searchBtn;
 
+    private ImageButton savedBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         searchEdt = findViewById(R.id.searchEditText);
         searchBtn = findViewById(R.id.searchButton);
-
+        savedBtn = findViewById(R.id.savedBooksButton);
 
         searchBtn.setOnClickListener(v -> {
             progressBar.setVisibility(View.VISIBLE); // Show progress bar while searching
@@ -62,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
             getBooksInfo(query);
+        });
+
+        savedBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SavedBooksActivity.class);
+            startActivity(intent);
         });
     }
 
@@ -118,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
                         RecyclerView recyclerView = findViewById(R.id.rv);
                         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-                        BookAdapter adapter = new BookAdapter(bookInfoArrayList, this);
+                        BookAdapter adapter = new BookAdapter(bookInfoArrayList, this, false);
                         recyclerView.setAdapter(adapter);
 
                     } catch (JSONException e) {
