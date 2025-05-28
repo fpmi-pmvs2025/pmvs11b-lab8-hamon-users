@@ -49,6 +49,8 @@ jobs:
           target: default
           arch: x86
           profile: Nexus 6
+          disable-animations: true
+          gpu: swiftshader_indirect
           script: ./gradlew connectedCheck --stacktrace
 
 
