@@ -24,6 +24,14 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Build the app
+      run: ./gradlew assembleDebug
+
+    - name: Upload apk
+      uses: actions/upload-artifact@v2
+      with:
+        name: debug apk
+        path: app/build/outputs/apk/debug/app-debug.apk
       
   Unit-test:
     name: Run unit tests
@@ -49,8 +57,6 @@ jobs:
           target: default
           arch: x86
           profile: Nexus 6
-          disable-animations: true
-          gpu: swiftshader_indirect
           script: ./gradlew connectedCheck --stacktrace
 
 
