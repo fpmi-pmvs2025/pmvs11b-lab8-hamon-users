@@ -47,22 +47,18 @@ This app leverages the Google Books API to perform full-text searches and retrie
 ---
 
 ## Installation
-```bash
-git clone https://github.com/fpmi-pmvs2025/pmvs11b-lab8-hamon-users.git      # clone the repo 
-cd pmvs11b-lab8-hamon-users
-````
-
-Open the project in Android Studio Arctic Fox or later and click **Sync Project with Gradle Files** to import all dependencies.
+1. **Go to build directory**
+2. **Download .apk on your Android device**
+3. **Run android app installation**
 
 ---
 
 ## Usage
 
-1. Run the app on an Android emulator or device using Android Studio’s **Run** button.
-2. Enter a search term in the search bar and tap **🔍 Search** to fetch results from Google Books.
-3. Tap the **💾 Save** icon on any book to add it to your local favorites.
-4. Tap **Saved Books** to view or delete your favorites.
-5. Tap any book item to view full details and open preview or buy links.
+1. Enter a search term in the search bar and tap **🔍 Search** to fetch results from Google Books.
+2. Tap the **💾 Save** icon on any book to add it to your local favorites.
+3. Tap **Saved Books** to view or delete your favorites.
+4. Tap any book item to view full details and open preview or buy links.
 
 ---
 
@@ -118,11 +114,19 @@ Database managed via a subclass of `SQLiteOpenHelper`.
 
 ## Contributing
 
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/YourFeature`).
-3. Commit your changes and push (`git push origin feature/YourFeature`).
-4. Open a Pull Request.
-   See GitHub’s guide on \[Contributing to Projects]  for detailed workflows.
+Authors: Ivan Korol, Katsiaryna Dankova
+
+**Kanban Project Management:** Ivan Korol.
+
+**Creating application architecture:** Katsiaryna Dankova.
+
+**Building DB architecture:** Katsiaryna Dankova.
+
+**CI/CD & Testing:** Ivan Korol.
+
+**Application development:** Ivan Korol, Katsiaryna Dankova.
+
+**Documentation:** Katsiaryna Dankova.
 
 ---
 
